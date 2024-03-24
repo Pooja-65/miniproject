@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Management System</title>
+  <link rel="icon" type="image/x-icon" href="images/smv_logo.png">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      background: url('images/smvitm_pic.jpg') center center fixed;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .logo img {
+      max-height: 80px; 
+      width: auto; 
+    }
+
+    .logo {
+      position: absolute;
+      top: 20px; 
+      left: 10px; 
+    }
+
+    header {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 1em 0;
+      background: url('images/header.jpeg') center center fixed;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+    }
+
+    nav {
+      background-color: #000000;
+      color: #fff;
+      padding: 1em;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 1em;
+      padding: 10px 20px; 
+      font-size: 18px; 
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      
+    }
+
+    nav a:hover {
+      background: #03e9f4;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
+    
+    nav a span {
+      position: absolute;
+      display: block;
+    }
+
+    nav a span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #03e9f4);
+      animation: btn-anim1 1s linear infinite;
+    }
+
+    @keyframes btn-anim1 {
+      0% {
+        left: -100%;
+      }
+      50%, 100% {
+        left: 100%;
+      }
+    }
+
+    nav a span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #03e9f4);
+      animation: btn-anim2 1s linear infinite;
+      animation-delay: .25s;
+    }
+
+    @keyframes btn-anim2 {
+      0% {
+        top: -100%;
+      }
+      50%, 100% {
+        top: 100%;
+      }
+    }
+
+    nav a span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #03e9f4);
+      animation: btn-anim3 1s linear infinite;
+      animation-delay: .5s;
+    }
+
+    @keyframes btn-anim3 {
+      0% {
+        right: -100%;
+      }
+      50%, 100% {
+        right: 100%;
+      }
+    }
+
+    nav a span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #03e9f4);
+      animation: btn-anim4 1s linear infinite;
+      animation-delay: .75s;
+    }
+
+    @keyframes btn-anim4 {
+      0% {
+        bottom: -100%;
+      }
+      50%, 100% {
+        bottom: 100%;
+      }
+    }
+
+    /* Hide regular navigation links and display toggle button for screens smaller than 600px */
+    @media screen and (max-width: 600px) {
+      nav a {
+        display: none;
+        width:180px;
+      }
+      
+      .menu-toggle {
+        display: block;
+        color: #fff;
+        border: none;
+        background: none;
+        font-size: 18px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+    @media screen and (min-width: 600px) and (max-width: 900px) {
+      nav a {
+        display: none;
+        width:180px;
+      }
+      
+      .menu-toggle {
+        display: block;
+        color: #fff;
+        border: none;
+        background: none;
+        font-size: 18px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+    }
+    /* Hide menu toggle button for screens larger than 900px */
+    @media screen and (min-width: 901px) {
+      .menu-toggle {
+        display: none;
+      }
+    }
+    .rotate-up {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+  </style>
+</head>
+<body>
+    <div class="logo">
+      <img src="images/smv_logo.png" alt="logo" usemap="#logomap">
+      <map name="logomap">
+        <area shape="rect" coords="74,64,5,5" alt="logo" href="https://sode-edu.in/">
+      </map>
+    </div>
+    
+  <header>
+    <h1>HOSTEL MANAGEMENT</h1>
+  </header>
+
+  <nav>
+    <img id="menu-toggle" class="menu-toggle" src="images/Menu_icon.png" alt="Menu" width="50px" height="50px">
+
+    <a href="index.html">
+      Home
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <a href="registration_page.html">
+        Student Information
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#">Room Information
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#">Mess Bills
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#">Room Allocation
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#">Fee Details
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <a href="#">Tracking
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+  </nav>
+
+  <section>
+    <!-- Your content goes here -->
+  </section>
+
+  <script>
+    // Toggle the visibility of the dropdown menu and rotate the image
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+      // Toggle rotation class for the image
+      if (this.classList.contains('rotate-up')) {
+        this.classList.remove('rotate-up');
+        // Delay toggling the menu visibility when rotating downwards
+        setTimeout(function() {
+          var menu = document.querySelectorAll('nav a');
+          for (var i = 0; i < menu.length; i++) {
+            menu[i].style.display = 'none';
+          }
+        }, 100); // Adjust the delay as needed (100 milliseconds in this example)
+      } else {
+        this.classList.add('rotate-up');
+        var menu = document.querySelectorAll('nav a');
+        for (var i = 0; i < menu.length; i++) {
+          menu[i].style.display = 'block';
+        }
+      }
+    });
+  </script>
+  
+  
+  
+</body>
+</html>
